@@ -7,11 +7,6 @@ let currentUser = null;
 
 // Initialisation au chargement de la page
 document.addEventListener('DOMContentLoaded', async () => {
-    // Vérifier que la configuration est faite
-    if (CONFIG.supabase.url === 'https://tjyzxytybdsyrhyxlyfp.supabase.co') {
-        showAlert('error', '⚠️ Configuration manquante ! Veuillez configurer vos clés dans config.js');
-        return;
-    }
 
     // Initialiser Supabase client
     supabaseClient = createClient(CONFIG.supabase.url, CONFIG.supabase.anonKey);
