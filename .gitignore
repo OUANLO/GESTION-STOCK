@@ -1,0 +1,41 @@
+# Fichiers de configuration avec clés API
+# (Utilisez les variables d'environnement à la place)
+# config.js contient les clés Supabase publiques donc peut être commité
+# MAIS ne committez JAMAIS de clés API privées
+
+# Variables d'environnement locales
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Dépendances
+node_modules/
+.pnp
+.pnp.js
+
+# Fichiers de build
+dist/
+build/
+.next/
+out/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Vercel
+.vercel

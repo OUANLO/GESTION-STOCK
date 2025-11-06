@@ -1,0 +1,163 @@
+╔══════════════════════════════════════════════════════════════════════════╗
+║                                                                          ║
+║               🏛️  PLATEFORME DE GESTION DE STOCKS CNAM  🏛️              ║
+║                                                                          ║
+║                      BIENVENUE ! LISEZ-MOI EN PREMIER                   ║
+║                                                                          ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+
+📦 VOUS AVEZ TÉLÉCHARGÉ 11 FICHIERS
+═══════════════════════════════════════════════════════════════════════════
+
+
+🎯 PAR OÙ COMMENCER ?
+─────────────────────────────────────────────────────────────────────────
+
+  👉 Si vous n'êtes PAS informaticien :
+     1. Ouvrez : DEMARRAGE_RAPIDE.md
+     2. Puis lisez : GUIDE_SIMPLIFIE.md
+     3. Suivez : GUIDE_INSTALLATION.md
+     4. Cochez : CHECKLIST.md
+
+  👉 Si vous êtes informaticien :
+     1. Lisez : README.md
+     2. Suivez : GUIDE_INSTALLATION.md
+     3. Configurez : config.js
+     4. Déployez !
+
+
+📁 DESCRIPTION DES FICHIERS
+═══════════════════════════════════════════════════════════════════════════
+
+FICHIERS DU SITE WEB (à déployer sur Vercel)
+─────────────────────────────────────────────────────────────────────────
+  ✅ index.html         → Interface utilisateur (page web)
+  ✅ app.js             → Logique de l'application (JavaScript)
+  ⚠️  config.js          → Configuration (MODIFIEZ VOS CLÉS ICI !)
+
+FICHIER DE BASE DE DONNÉES (à exécuter dans Supabase)
+─────────────────────────────────────────────────────────────────────────
+  ✅ database.sql       → Structure de la base de données
+
+DOCUMENTATION (à lire pour comprendre)
+─────────────────────────────────────────────────────────────────────────
+  📖 DEMARRAGE_RAPIDE.md          → Vue d'ensemble et liens utiles
+  📖 GUIDE_SIMPLIFIE.md           → Guide pour débutants
+  📖 GUIDE_INSTALLATION.md        → Guide détaillé pas à pas
+  📖 ARCHITECTURE_EXPLIQUEE.md    → Schémas et explications visuelles
+  📖 CHECKLIST.md                 → Liste de contrôle à imprimer
+  📖 README.md                    → Documentation technique
+
+CONFIGURATION
+─────────────────────────────────────────────────────────────────────────
+  ⚙️  package.json      → Informations du projet
+
+
+⚡ INSTALLATION RAPIDE (50 minutes)
+═══════════════════════════════════════════════════════════════════════════
+
+  ÉTAPE 1 : Créer un compte Supabase (base de données)     [15 min]
+  ÉTAPE 2 : Créer un compte Brevo (envoi d'emails)         [10 min]
+  ÉTAPE 3 : Modifier config.js avec vos clés               [5 min]
+  ÉTAPE 4 : Déployer sur Vercel via GitHub                 [10 min]
+  ÉTAPE 5 : Tester votre site                              [10 min]
+
+
+🔗 LIENS IMPORTANTS
+═══════════════════════════════════════════════════════════════════════════
+
+  Services à créer (GRATUITS) :
+  ────────────────────────────────────────────────────────────────────────
+  🌐 Supabase   → https://supabase.com
+  📧 Brevo      → https://brevo.com
+  💾 GitHub     → https://github.com
+  🚀 Vercel     → https://vercel.com
+
+
+⚠️  IMPORTANT - À FAIRE AVANT DE COMMENCER
+═══════════════════════════════════════════════════════════════════════════
+
+  ☑️  Lisez DEMARRAGE_RAPIDE.md pour comprendre le projet
+  ☑️  Prévoyez 50 minutes sans interruption
+  ☑️  Ayez un email professionnel accessible
+  ☑️  Préparez un carnet pour noter vos clés API
+  ☑️  Imprimez CHECKLIST.md pour suivre votre progression
+
+
+🔐 IDENTIFIANTS PAR DÉFAUT
+═══════════════════════════════════════════════════════════════════════════
+
+  Administrateur (à la première connexion) :
+  ────────────────────────────────────────────────────────────────────────
+  📧 Email      : fousseni.ouattara@ipscnam.ci
+  🔑 Mot de passe : admin
+
+  ⚠️  Vous DEVREZ changer ce mot de passe à la première connexion !
+
+
+🎯 OBJECTIF FINAL
+═══════════════════════════════════════════════════════════════════════════
+
+  À la fin de l'installation, vous aurez :
+
+  ✅ Un site web accessible sur Internet
+  ✅ Un système de connexion sécurisé
+  ✅ Une base de données pour vos stocks
+  ✅ La possibilité de créer des utilisateurs
+  ✅ L'envoi automatique d'emails avec les identifiants
+
+
+🆘 BESOIN D'AIDE ?
+═══════════════════════════════════════════════════════════════════════════
+
+  Problème technique ?
+  ────────────────────────────────────────────────────────────────────────
+  → Consultez la section "Dépannage" dans GUIDE_INSTALLATION.md
+
+  Problème de compréhension ?
+  ────────────────────────────────────────────────────────────────────────
+  → Lisez ARCHITECTURE_EXPLIQUEE.md avec les schémas visuels
+
+  Perdu dans les étapes ?
+  ────────────────────────────────────────────────────────────────────────
+  → Utilisez CHECKLIST.md pour voir où vous en êtes
+
+
+📊 CARACTÉRISTIQUES TECHNIQUES
+═══════════════════════════════════════════════════════════════════════════
+
+  Frontend        : HTML5, CSS3, JavaScript (Vanilla)
+  Backend         : Supabase (PostgreSQL + Auth)
+  Authentification: Supabase Auth (bcrypt)
+  Emails          : Brevo API
+  Hébergement     : Vercel (CDN Global)
+  
+  Sécurité        : Row Level Security (RLS) activé
+                    Mots de passe hachés
+                    HTTPS automatique
+  
+  Compatibilité   : Tous navigateurs modernes
+                    Desktop, Tablette, Mobile
+
+
+💡 CONSEIL IMPORTANT
+═══════════════════════════════════════════════════════════════════════════
+
+  NE SAUTEZ AUCUNE ÉTAPE !
+  
+  Chaque étape est nécessaire pour le bon fonctionnement du système.
+  Suivez les guides dans l'ordre et cochez la checklist au fur et à mesure.
+
+
+🎉 PRÊT À COMMENCER ?
+═══════════════════════════════════════════════════════════════════════════
+
+  Ouvrez maintenant : DEMARRAGE_RAPIDE.md
+
+  Bonne installation ! 🚀
+
+
+═══════════════════════════════════════════════════════════════════════════
+Projet créé pour la CNAM - Novembre 2024 - Version 1.0.0
+═══════════════════════════════════════════════════════════════════════════
