@@ -1,0 +1,260 @@
+╔══════════════════════════════════════════════════════════════════════════╗
+║                                                                          ║
+║            🏛️  CNAM - GESTION DE STOCKS - VERSION 2.0  🏛️              ║
+║                                                                          ║
+║                     INDEX DES FICHIERS TÉLÉCHARGÉS                      ║
+║                                                                          ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+
+📚 DOCUMENTATION (À LIRE EN PREMIER)
+═══════════════════════════════════════════════════════════════════════════
+
+  ⭐ GUIDE_INSTALLATION_SIMPLIFIE.md    [25 KB]
+     → Guide complet d'installation étape par étape
+     → À LIRE EN PREMIER !
+     → Temps estimé : 50 minutes
+
+  📖 README_V2.md    [12 KB]
+     → Vue d'ensemble de la version 2
+     → Architecture technique
+     → Fonctionnalités et différences
+
+  📝 CHANGEMENTS_V2.md    [8 KB]
+     → Récapitulatif détaillé des changements
+     → Comparaison V1 vs V2
+     → Migration depuis V1
+
+
+🌐 FICHIERS FRONTEND (À UPLOADER SUR GITHUB)
+═══════════════════════════════════════════════════════════════════════════
+
+  ✅ index_simple.html    [15 KB]
+     → Interface utilisateur avec champ mot de passe
+     → ⚠️ À RENOMMER en "index.html" avant déploiement
+
+  ✅ app_simple.js    [18 KB]
+     → Logique de l'application (authentification custom)
+     → ⚠️ À RENOMMER en "app.js" avant déploiement
+
+  ⚙️ config.js    [1 KB]
+     → Configuration (clés Supabase et Brevo)
+     → ⚠️ À MODIFIER avec vos propres clés
+
+  📦 package_new.json    [500 octets]
+     → Dépendances npm (inclut bcryptjs)
+     → ⚠️ À RENOMMER en "package.json" avant déploiement
+
+
+🔧 BACKEND - API SERVERLESS (DOSSIER api/)
+═══════════════════════════════════════════════════════════════════════════
+
+  À créer un dossier "api/" dans votre repository GitHub et y placer :
+
+  🔐 api/login.js    [3 KB]
+     → Authentification avec vérification bcrypt
+     → Endpoint : POST /api/login
+
+  👤 api/create-user-new.js    [5 KB]
+     → Création d'utilisateur + hashage + envoi email
+     → Endpoint : POST /api/create-user-new
+
+  🔒 api/hash-password.js    [1 KB]
+     → Utilitaire pour hasher un mot de passe
+     → Endpoint : POST /api/hash-password
+
+
+🗄️ BASE DE DONNÉES (À EXÉCUTER DANS SUPABASE)
+═══════════════════════════════════════════════════════════════════════════
+
+  📊 database_simple.sql    [6 KB]
+     → Structure complète de la base de données
+     → Table users avec colonne "password"
+     → Politiques RLS sécurisées
+     → ⚠️ Modifier le hash du mot de passe admin (ligne 91)
+
+
+🛠️ UTILITAIRES
+═══════════════════════════════════════════════════════════════════════════
+
+  🔑 generate-admin-hash.js    [1 KB]
+     → Script Node.js pour générer le hash du mot de passe admin
+     → Usage : npm install bcryptjs && node generate-admin-hash.js
+
+
+═══════════════════════════════════════════════════════════════════════════
+📋 CHECKLIST DE DÉPLOIEMENT
+═══════════════════════════════════════════════════════════════════════════
+
+  AVANT DE COMMENCER :
+  ☐ J'ai lu GUIDE_INSTALLATION_SIMPLIFIE.md
+  ☐ J'ai créé mes comptes (Supabase, Brevo, GitHub, Vercel)
+  ☐ J'ai préparé un carnet pour noter mes clés
+
+  ÉTAPE 1 - BASE DE DONNÉES :
+  ☐ Projet Supabase créé
+  ☐ Hash du mot de passe admin généré
+  ☐ database_simple.sql modifié avec le bon hash (ligne 91)
+  ☐ Script SQL exécuté avec succès dans Supabase
+
+  ÉTAPE 2 - FICHIERS :
+  ☐ index_simple.html renommé en index.html
+  ☐ app_simple.js renommé en app.js
+  ☐ package_new.json renommé en package.json
+  ☐ config.js modifié avec mes clés Supabase et Brevo
+
+  ÉTAPE 3 - GITHUB :
+  ☐ Repository "cnam-stock" créé
+  ☐ Fichiers frontend uploadés (index.html, app.js, config.js, package.json)
+  ☐ Dossier api/ créé avec les 3 fichiers API
+
+  ÉTAPE 4 - VERCEL :
+  ☐ Projet connecté depuis GitHub
+  ☐ Variables d'environnement configurées :
+      ☐ SUPABASE_URL
+      ☐ SUPABASE_SERVICE_ROLE_KEY
+      ☐ BREVO_API_KEY
+      ☐ SENDER_EMAIL
+  ☐ Déploiement terminé avec succès
+
+  ÉTAPE 5 - TESTS :
+  ☐ Connexion admin réussie (fousseni.ouattara@ipscnam.ci / admin)
+  ☐ Création d'un utilisateur test réussie
+  ☐ Email reçu avec les identifiants
+  ☐ Connexion avec l'utilisateur test réussie
+
+
+═══════════════════════════════════════════════════════════════════════════
+🔑 IDENTIFIANTS PAR DÉFAUT
+═══════════════════════════════════════════════════════════════════════════
+
+  Administrateur :
+  ─────────────────────────────────────────────────────────────────────────
+  Email      : fousseni.ouattara@ipscnam.ci
+  Password   : admin
+  
+  ⚠️ Ce mot de passe doit être haché avant insertion dans la BDD
+
+
+═══════════════════════════════════════════════════════════════════════════
+🌐 SERVICES EXTERNES REQUIS (TOUS GRATUITS)
+═══════════════════════════════════════════════════════════════════════════
+
+  📊 Supabase    → https://supabase.com
+     Rôle : Base de données PostgreSQL + RLS
+     Gratuit : 500 MB, 2 GB transfert/mois
+
+  📧 Brevo    → https://brevo.com
+     Rôle : Envoi d'emails transactionnels
+     Gratuit : 300 emails/jour
+
+  💾 GitHub    → https://github.com
+     Rôle : Hébergement du code source
+     Gratuit : Repositories publics illimités
+
+  🚀 Vercel    → https://vercel.com
+     Rôle : Hébergement + API Serverless
+     Gratuit : 100 GB bande passante/mois
+
+
+═══════════════════════════════════════════════════════════════════════════
+📊 STATISTIQUES DU PROJET
+═══════════════════════════════════════════════════════════════════════════
+
+  Lignes de code :
+  ├── Frontend (HTML + JS) : ~600 lignes
+  ├── Backend (API) : ~250 lignes
+  ├── SQL : ~180 lignes
+  └── Documentation : ~2000 lignes
+
+  Technologies :
+  ├── HTML5 / CSS3
+  ├── JavaScript (Vanilla)
+  ├── PostgreSQL (via Supabase)
+  ├── Bcrypt (hachage)
+  └── Node.js (API Serverless)
+
+  Temps d'installation : ~50 minutes
+  Niveau de difficulté : 😊 Facile à Moyen
+
+
+═══════════════════════════════════════════════════════════════════════════
+⚠️ POINTS D'ATTENTION IMPORTANTS
+═══════════════════════════════════════════════════════════════════════════
+
+  1. RENOMMER LES FICHIERS avant de déployer :
+     index_simple.html → index.html
+     app_simple.js → app.js
+     package_new.json → package.json
+
+  2. MODIFIER config.js avec vos vraies clés (Supabase + Brevo)
+
+  3. GÉNÉRER LE HASH du mot de passe admin avant le SQL :
+     → Utilisez https://bcrypt-generator.com/ (rounds: 10)
+     → OU le script generate-admin-hash.js
+
+  4. CONFIGURER les variables d'environnement sur Vercel
+     (SUPABASE_SERVICE_ROLE_KEY, BREVO_API_KEY, etc.)
+
+  5. CRÉER le dossier api/ dans votre repository GitHub
+
+  6. NE JAMAIS exposer SUPABASE_SERVICE_ROLE_KEY au frontend
+
+
+═══════════════════════════════════════════════════════════════════════════
+✨ NOUVEAUTÉS DE LA VERSION 2.0
+═══════════════════════════════════════════════════════════════════════════
+
+  ✅ L'admin définit les mots de passe directement
+  ✅ Création d'utilisateur entièrement automatique
+  ✅ Pas de changement obligatoire de mot de passe
+  ✅ Mots de passe hachés avec bcrypt (10 rounds)
+  ✅ API serverless pour plus de sécurité
+  ✅ Envoi automatique d'email avec identifiants
+  ✅ Interface simplifiée et intuitive
+
+
+═══════════════════════════════════════════════════════════════════════════
+🆘 BESOIN D'AIDE ?
+═══════════════════════════════════════════════════════════════════════════
+
+  Problème de connexion ?
+  → Consultez la section "Dépannage" dans GUIDE_INSTALLATION_SIMPLIFIE.md
+
+  Problème de compréhension ?
+  → Lisez README_V2.md pour l'architecture
+
+  Perdu dans les étapes ?
+  → Suivez la checklist ci-dessus
+
+
+═══════════════════════════════════════════════════════════════════════════
+🎯 PROCHAINES ÉTAPES
+═══════════════════════════════════════════════════════════════════════════
+
+  1️⃣ Ouvrez GUIDE_INSTALLATION_SIMPLIFIE.md
+  2️⃣ Suivez TOUTES les étapes dans l'ordre
+  3️⃣ Cochez la checklist au fur et à mesure
+  4️⃣ Testez votre plateforme
+  5️⃣ Profitez de votre système de gestion de stocks ! 🎉
+
+
+═══════════════════════════════════════════════════════════════════════════
+📞 SUPPORT ET DOCUMENTATION
+═══════════════════════════════════════════════════════════════════════════
+
+  Documentation officielle :
+  ├── Supabase : https://supabase.com/docs
+  ├── Brevo : https://developers.brevo.com
+  ├── Vercel : https://vercel.com/docs
+  └── Bcrypt : https://github.com/kelektiv/node.bcrypt.js
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+                            BON DÉPLOIEMENT ! 🚀
+
+                       Version 2.0.0 - Novembre 2024
+                              CNAM Stock
+
+═══════════════════════════════════════════════════════════════════════════

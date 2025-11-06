@@ -1,0 +1,25 @@
+{
+  "name": "cnam-stock-management",
+  "version": "2.0.0",
+  "description": "Plateforme de gestion de stocks pour la CNAM - Version simplifiée",
+  "main": "index_simple.html",
+  "scripts": {
+    "dev": "npx http-server -p 3000",
+    "build": "echo 'No build step required for static site'"
+  },
+  "keywords": [
+    "stock",
+    "management",
+    "cnam",
+    "inventory"
+  ],
+  "author": "CNAM",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "bcryptjs": "^2.4.3"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
